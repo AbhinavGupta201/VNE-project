@@ -1,6 +1,9 @@
 
 
 import copy
+import copy
+import random
+from typing import List, Dict, Tuple
 
 # Define the physical network resources
 '''physical_network = {
