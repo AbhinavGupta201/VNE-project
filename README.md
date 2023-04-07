@@ -35,3 +35,5 @@
 8. Check if the physical link has enough bandwidth to map the virtual link.
 9. If yes, add the mapping of the virtual link to the physical link in the mapping dictionary, update the available bandwidth in the physical link, and move to the next virtual link.
 10. Return the mapping dictionary containing the mapping of virtual nodes and links to physical nodes and links.
+
+The added print statements display the updated resource utilization, including CPU, memory, and bandwidth, in the physical nodes and links, providing valuable information for monitoring and analyzing resource utilization during VNE. This allows for better understanding and management of the physical network's resource usage during virtual network embedding
