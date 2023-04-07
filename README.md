@@ -1,6 +1,6 @@
 # Cloud Computing project
 
-Team Members
+### Team Members
 1. Abhinav Gupta
 2. Anupam Lal
 3. Shubhanshu Singh
@@ -21,6 +21,7 @@ Team Members
 10. Return the mapping dictionary containing the mapping of virtual nodes and links to physical nodes and links.
 
 ### Example:
+##### Sample input and output
 
 ![image](https://user-images.githubusercontent.com/79687143/230660581-b0292072-81cb-4549-b268-86c65c139fdb.png)
 
