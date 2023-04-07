@@ -20,8 +20,19 @@
 9. If yes, add the mapping of the virtual link to the physical link in the mapping dictionary, update the available bandwidth in the physical link, and move to the next virtual link.
 10. Return the mapping dictionary containing the mapping of virtual nodes and links to physical nodes and links.
 
-### Example:
-##### Sample input and output
+#### To Run the Project Run main.py
 
-![image](https://user-images.githubusercontent.com/79687143/230660581-b0292072-81cb-4549-b268-86c65c139fdb.png)
+### Example:
+#### Sample input and output
+
+##### Sample input 
+![image](https://user-images.githubusercontent.com/79687143/230666006-e9b9be29-23fa-458c-bdaa-25592e21cd44.png)
+
+
+##### Output of above input and  Resource utilization:
+
+![image](https://user-images.githubusercontent.com/79687143/230665656-aac8d7d4-565a-437e-8364-ec155bd01fe7.png)
+
+###### The loop will go on until anything other than the integer given as output.
+
 
