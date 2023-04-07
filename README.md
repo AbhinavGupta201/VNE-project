@@ -7,8 +7,7 @@
 4. Vamshikrishna M
 
 
-#### To Run the Project Run main.py
-
+#### Execute VNE-code.py for results
 
 
 ### Example:
