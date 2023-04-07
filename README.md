@@ -37,3 +37,8 @@
 10. Return the mapping dictionary containing the mapping of virtual nodes and links to physical nodes and links.
 
 The added print statements display the updated resource utilization, including CPU, memory, and bandwidth, in the physical nodes and links, providing valuable information for monitoring and analyzing resource utilization during VNE. This allows for better understanding and management of the physical network's resource usage during virtual network embedding
+
+
+Research paper:
+Hejja, Khaled, and Xavier Hesselbach. "Online power aware coordinated virtual network embedding with 5G delay constraint." Journal of Network and Computer Applications 124 (2018): 121-136
+
