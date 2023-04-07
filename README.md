@@ -21,31 +21,6 @@ Team Members
 10. Return the mapping dictionary containing the mapping of virtual nodes and links to physical nodes and links.
 
 ### Example:
-##### physical Network 
-physical_network = {
-    'nodes': {
-        'node1': {'cpu': 8, 'memory': 16},
-        'node2': {'cpu': 8, 'memory': 16},
-        'node3': {'cpu': 8, 'memory': 16},
-    },
-    'links': {
-        ('node1', 'node2'): {'bandwidth': 10},
-        ('node2', 'node3'): {'bandwidth': 10},
-        ('node1', 'node3'): {'bandwidth': 10},
-    }
-}
 
-##### virtual network request
-virtual_network = {
-    'nodes': {
-        'vnode1': {'cpu': 4, 'memory': 8},
-        'vnode2': {'cpu': 6, 'memory': 12},
-        'vnode3': {'cpu': 2, 'memory': 4},
-    },
-    'links': {
-        ('vnode1', 'vnode2'): {'bandwidth': 5},
-        ('vnode2', 'vnode3'): {'bandwidth': 5},
-        ('vnode1', 'vnode3'): {'bandwidth': 5},
-    }
-}
-#### Output
+![image](https://user-images.githubusercontent.com/79687143/230660581-b0292072-81cb-4549-b268-86c65c139fdb.png)
+
