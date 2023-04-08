@@ -1,10 +1,11 @@
 
 
 import copy
-import copy
 import random
 from typing import List, Dict, Tuple
 
+
+#it is an example
 # Define the physical network resources
 '''physical_network = {
     'nodes': {
@@ -34,21 +35,17 @@ virtual_network = {
     }
 }
 '''
+# 
+# Performs Virtual Network Embedding (VNE) by mapping virtual nodes and links to physical nodes and links.
+
+# Args:
+#     physical_network (dict): A dictionary representing the physical network resources.
+#     virtual_network (dict): A dictionary representing the virtual network request.
+
+
+# Define the physical network resources
 def vne_mapping(physical_network, virtual_network):
-    """
-    Performs Virtual Network Embedding (VNE) by mapping virtual nodes and links to physical nodes and links.
-
-    Args:
-        physical_network (dict): A dictionary representing the physical network resources.
-        virtual_network (dict): A dictionary representing the virtual network request.
-
-    Returns:
-        dict: A dictionary containing the mapping of virtual nodes and links to physical nodes and links.
-            The keys are the virtual node and link names, and the values are the corresponding physical node and link names.
-    """
     mapping = {}  # Dictionary to store the mapping of virtual nodes and links to physical nodes and links
-
-
 
     # Iterate through each virtual node in the virtual network request
     for vnode in virtual_network['nodes']:
@@ -66,6 +63,9 @@ def vne_mapping(physical_network, virtual_network):
                 # Update the available resources in the physical node
                 physical_network['nodes'][pnode]['cpu'] -= vnode_resources['cpu']
                 physical_network['nodes'][pnode]['memory'] -= vnode_resources['memory']
+                print(f"Virtual node {vnode} mapped to physical node {pnode}")
+                print(f"Updated CPU resources in physical node {pnode}: {physical_network['nodes'][pnode]['cpu']}")
+                print(f"Updated memory resources in physical node {pnode}: {physical_network['nodes'][pnode]['memory']}")
                 break  # Move to the next virtual node
 
     # Iterate through each virtual link in the virtual network request
@@ -75,18 +75,27 @@ def vne_mapping(physical_network, virtual_network):
         # Iterate through each physical link in the physical network
         for plink in physical_network['links']:
             plink_bandwidth = physical_network['links'][plink]['bandwidth']  # Bandwidth available in the physical link
-        # Check if the physical link has enough bandwidth to map the virtual link
+
+            # Check if the physical link has enough bandwidth to map the virtual link
             if vlink_bandwidth <= plink_bandwidth:
                 # If yes, add the mapping of the virtual link to the physical link
                 mapping[vlink] = plink
                 # Update the available bandwidth in the physical link
                 physical_network['links'][plink]['bandwidth'] -= vlink_bandwidth
+                print(f"Virtual link {vlink} mapped to physical link {plink}")
+                print(f"Updated bandwidth in physical link {plink}: {physical_network['links'][plink]['bandwidth']}")
                 break  # Move to the next virtual link
 
     return mapping
+
+# Returns:
+#     dict: A dictionary containing the mapping of virtual nodes and links to physical nodes and links.
+#         The keys are the virtual node and link names, and the values are the corresponding physical node and link names.
+# 
 #end of VNE function
 
 # Take input for the number of nodes
+print("Enter Physical Node Details")
 num_nodes = int(input("Enter the number of nodes: "))
 
 # Initialize an empty dictionary to store the physical network information
@@ -140,9 +149,8 @@ while 1:
     mapping = vne_mapping(physical_network, virtual_network)
     
     #printing the virtual nodes 
-    print("\nMapping of virtual nodes and links to physical nodes and links:")
+    print("\nMapping of virtual nodes to physical nodes and  links:")
     for key, value in mapping.items():
         print(f"{key} --> {value}")
     print('\n')
-
 
